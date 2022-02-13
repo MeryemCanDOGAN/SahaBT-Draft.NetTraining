@@ -1,0 +1,213 @@
+USE [master]
+GO
+
+/****** Object:  Database [SahaBT]    Script Date: 13.02.2022 04:16:18 ******/
+CREATE DATABASE [SahaBT]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N'SahaBT', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\SahaBT.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+ LOG ON 
+( NAME = N'SahaBT_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.SQLEXPRESS\MSSQL\DATA\SahaBT_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [SahaBT].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [SahaBT] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [SahaBT] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [SahaBT] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [SahaBT] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [SahaBT] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [SahaBT] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [SahaBT] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [SahaBT] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [SahaBT] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+GO
+
+ALTER DATABASE [SahaBT] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+GO
+
+ALTER DATABASE [SahaBT] SET DELAYED_DURABILITY = DISABLED 
+GO
+
+ALTER DATABASE [SahaBT] SET QUERY_STORE = OFF
+GO
+
+ALTER DATABASE [SahaBT] SET  READ_WRITE 
+GO
+
+/****************************************
+
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sanford','Drinkwater','sdrinkwater0@unblog.fr','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Patric','Bonny','pbonny1@t-online.de','Female','Brazil')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Valli','Rutherfoord','vrutherfoord2@alexa.com','Male','Japan')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Homere','Vankov','hvankov3@prlog.org','Male','Mongolia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Tiphanie','Kinrade','tkinrade4@newsvine.com','Female','Nicaragua')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Trueman','Bresnahan','tbresnahan5@bloomberg.com','Female','Croatia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Emilie','Fantonetti','efantonetti6@ezinearticles.com','Male','Indonesia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Cristiano','Grenter','cgrenter7@blog.com','Male','Mexico')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Georgeanne','Vickery','gvickery8@yahoo.co.jp','Genderqueer','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sterling','Lambrechts','slambrechts9@4shared.com','Male','Kazakhstan')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Broddy','Chatband','bchatbanda@wikispaces.com','Male','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Courtney','Fawdrie','cfawdrieb@ycombinator.com','Male','Armenia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Maxwell','Keefe','mkeefec@jalbum.net','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Cullan','MacAllan','cmacalland@hao123.com','Male','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Lark','Corrington','lcorringtone@aol.com','Male','Canada')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kiel','Goff','kgofff@artisteer.com','Female','Brazil')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Hasty','Bothie','hbothieg@deliciousdays.com','Female','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Corina','Legrave','clegraveh@toplist.cz','Female','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Ruthann','Feasley','rfeasleyi@123-reg.co.uk','Genderfluid','New Zealand')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Drew','Leftly','dleftlyj@wikispaces.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Annissa','Roof','aroofk@skyrock.com','Male','Iran')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sascha','Heineking','sheinekingl@squidoo.com','Bigender','Iran')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Gardener','Hinksen','ghinksenm@amazon.co.uk','Female','Iran')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Thedric','Duval','tduvaln@privacy.gov.au','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Darby','Harston','dharstono@paginegialle.it','Male','Poland')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Odella','Ridgley','oridgleyp@joomla.org','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kitty','Seilmann','kseilmannq@slate.com','Male','Sweden')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Wilmer','Garnar','wgarnarr@admin.ch','Female','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Fae','Edgerton','fedgertons@seesaa.net','Non-binary','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sadella','Ebanks','sebankst@imgur.com','Female','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kristoffer','Forster','kforsteru@cargocollective.com','Female','Indonesia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Margot','Giorgi','mgiorgiv@fda.gov','Female','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Monica','Wainscot','mwainscotw@reuters.com','Female','United States')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Eberhard','Linscott','elinscottx@slashdot.org','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Brent','Narrie','bnarriey@behance.net','Male','Brazil')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Oliver','Pheasey','opheaseyz@cargocollective.com','Male','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Thorstein','Sweett','tsweett10@geocities.com','Female','Ukraine')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Nat','Penberthy','npenberthy11@npr.org','Female','France')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Lusa','Pile','lpile12@sitemeter.com','Male','Argentina')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sherwynd','Oles','soles13@people.com.cn','Male','Mexico')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Claudine','Lapidus','clapidus14@paypal.com','Male','Czech Republic')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Row','Whetnell','rwhetnell15@google.co.uk','Female','Cuba')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Jaimie','Jereatt','jjereatt16@wsj.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Cristobal','Hardan','chardan17@so-net.ne.jp','Female','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Dolley','Elders','delders18@dion.ne.jp','Bigender','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Gusty','Henrys','ghenrys19@fastcompany.com','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Jervis','Bernath','jbernath1a@is.gd','Agender','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Golda','Vassay','gvassay1b@virginia.edu','Genderqueer','Ukraine')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Augustina','Braunston','abraunston1c@plala.or.jp','Male','Brazil')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Matti','Lupson','mlupson1d@hostgator.com','Male','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Orsola','Redd','oredd1e@youtube.com','Male','Norway')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Rowney','Syme','rsyme1f@aboutads.info','Non-binary','Pakistan')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Teresina','Keld','tkeld1g@reverbnation.com','Female','Nigeria')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Lilian','Taleworth','ltaleworth1h@slate.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Agretha','Sutterby','asutterby1i@blogspot.com','Male','Kuwait')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Toby','Cream','tcream1j@netlog.com','Male','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Glennis','Sines','gsines1k@angelfire.com','Genderqueer','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Elysia','Tomley','etomley1l@blogspot.com','Female','Finland')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Gerardo','Minichi','gminichi1m@ezinearticles.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Bab','Lemanu','blemanu1n@vistaprint.com','Male','United States')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Christye','McMillan','cmcmillan1o@biblegateway.com','Male','Mauritius')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Osbert','Elles','oelles1p@salon.com','Female','Finland')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Cecily','Denney','cdenney1q@wikia.com','Female','Honduras')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Alecia','Pentycost','apentycost1r@washington.edu','Genderqueer','Sweden')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Ward','Crighton','wcrighton1s@bbc.co.uk','Female','Ukraine')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Benetta','Roblett','broblett1t@psu.edu','Male','Slovenia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Liane','Takle','ltakle1u@rambler.ru','Male','Albania')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Harlin','Bernot','hbernot1v@cnbc.com','Female','Albania')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Gilburt','Pappi','gpappi1w@ibm.com','Male','North Korea')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Rosita','Nare','rnare1x@rediff.com','Female','Faroe Islands')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Viva','Jacketts','vjacketts1y@fda.gov','Female','Portugal')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Pearce','Mulvin','pmulvin1z@telegraph.co.uk','Female','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kellen','Vinall','kvinall20@pbs.org','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kleon','Crampin','kcrampin21@tamu.edu','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sarita','Diffley','sdiffley22@biglobe.ne.jp','Non-binary','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Meryl','Allsebrook','mallsebrook23@topsy.com','Female','France')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Jo-ann','Broadbent','jbroadbent24@infoseek.co.jp','Male','Mauritius')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Currey','Juliano','cjuliano25@icq.com','Female','Nigeria')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Chaddy','Latty','clatty26@vkontakte.ru','Female','Sweden')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Gerald','Horrod','ghorrod27@addtoany.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Marcel','Westley','mwestley28@histats.com','Female','Indonesia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Layla','Lippiello','llippiello29@home.pl','Male','Angola')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sile','Lashford','slashford2a@tripod.com','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kai','Headrick','kheadrick2b@usnews.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Althea','Van Halen','avanhalen2c@cnbc.com','Male','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Raquela','Enevoldsen','renevoldsen2d@parallels.com','Male','Russia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Ginnifer','Yesichev','gyesichev2e@google.es','Female','Albania')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Aloysia','Kusick','akusick2f@sfgate.com','Male','Netherlands')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Tracie','Corbin','tcorbin2g@nyu.edu','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Trix','OIlier','toilier2h@ebay.co.uk','Female','Kazakhstan')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Kipp','Keerl','kkeerl2i@usa.gov','Female','Malaysia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Reid','McGivena','rmcgivena2j@shinystat.com','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Erma','Bartelet','ebartelet2k@wikia.com','Female','Indonesia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Estrellita','Scamerden','escamerden2l@smugmug.com','Male','Palestinian Territory')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Idell','Twining','itwining2m@home.pl','Female','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Sisile','Huard','shuard2n@woothemes.com','Female','Mongolia')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Romeo','Brisse','rbrisse2o@slideshare.net','Male','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Danna','Shiell','dshiell2p@comcast.net','Female','Philippines')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Wanids','Comer','wcomer2q@yellowbook.com','Female','China')
+INSERT INTO KisiListesi (FirstName, LastName,Email,Gender,Country) VALUES('Schuyler','Hedon','shedon2r@sbwire.com','Female','Portugal')
