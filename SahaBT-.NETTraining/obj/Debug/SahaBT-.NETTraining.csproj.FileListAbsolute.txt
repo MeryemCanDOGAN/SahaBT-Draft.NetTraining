@@ -1,0 +1,11 @@
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\bin\Debug\SahaBT-.NETTraining.exe.config
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\bin\Debug\SahaBT-.NETTraining.exe
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\bin\Debug\SahaBT-.NETTraining.pdb
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.csproj.AssemblyReference.cache
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.csproj.SuggestedBindingRedirects.cache
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT_.NETTraining.Form1.resources
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT_.NETTraining.Properties.Resources.resources
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.csproj.GenerateResource.cache
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.csproj.CoreCompileInputs.cache
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.exe
+C:\Users\LENOVO\Desktop\SahaBT-Trainning\SahaBT-.NETTraining\obj\Debug\SahaBT-.NETTraining.pdb
